@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link href="vendor/fontawesome-pro/css/all.css" rel="stylesheet">
+    <link href="vendor/bulma/css/bulma.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div class="gradient">
+            <div class="gradient-2"></div>
+            <section class="hero is-dark impact-hero">
+                <div class="hero-body">
+                    <h1 class="title">
+                        Vue Data Table Testing
+                    </h1>
+                    <div class="search">
+                        <div id="search">
+                            <input class="input" name="query" v-model="searchQuery" placeholder="Search example data">
+                        </div>
+                    </div>
+            </section>
+            </div>
+            <div class="columns content-wrap">
+                <div class="column is-offset-one">
+                    <app-grid :data="gridData" :columns="gridColumns" :labels="gridLabels" :filter-key="searchQuery">
+                    </app-grid>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <p>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="vendor/vue/vue.js"></script>
+        <script src="data.js"></script>
+        <script src="scripts.js"></script>
+</body>
+
+</html>
